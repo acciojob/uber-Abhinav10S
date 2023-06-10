@@ -19,7 +19,7 @@ public class Customer {
         return customerId;
     }
 
-    @OneToOne(mappedBy = "customer" ,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer" ,cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList = new ArrayList<>() ;
 
     public void setCustomerId(int customerId) {

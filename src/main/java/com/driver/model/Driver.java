@@ -15,7 +15,7 @@ public class Driver {
     private String mobile ;
 
     private String password ;
-    @OneToOne(mappedBy = "driver" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "driver" , cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList = new ArrayList<>() ;
     @OneToOne(mappedBy = "driver" , cascade = CascadeType.ALL)
     private Cab cab ;
