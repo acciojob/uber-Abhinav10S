@@ -32,7 +32,7 @@ public class DriverServiceImpl implements DriverService {
 		 cab.setPerKmRate(10);
 
 		 driver.setCab(cab);
-		 driverRepository3.delete(driver);
+		 driverRepository3.save(driver);
 	}
 
 	@Override
