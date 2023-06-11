@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.driver.model.TripStatus.CANCELED;
+import static com.driver.model.TripStatus.COMPLETED;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -81,7 +82,7 @@ public class CustomerServiceImpl implements CustomerService {
 	public void cancelTrip(Integer tripId){
 		//Cancel the trip having given trip Id and update TripBooking attributes accordingly
 		TripBooking tripBooking = tripBookingRepository2.findById(tripId).get();
-		  tripBooking.setStatus(CANCELED);
+		  tripBooking.setStatus(COMPLETED); //Cancelled
             tripBooking.setBill(0);
 			tripBooking.getDriver().getCab().setAvailable(Boolean.TRUE);
 
