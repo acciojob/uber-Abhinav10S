@@ -98,7 +98,7 @@ public class CustomerServiceImpl implements CustomerService {
 		  tripBooking.setStatus(COMPLETED);
 		  int bill = tripBooking.getDriver().getCab().getPerKmRate()*tripBooking.getDistanceInKm() ;
 		  tripBooking.getDriver().getCab().setAvailable(Boolean.TRUE);
-
+		  tripBooking.setBill(bill);
 
 		  tripBookingRepository2.save(tripBooking);
 
