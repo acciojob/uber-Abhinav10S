@@ -46,7 +46,7 @@ public class DriverServiceImpl implements DriverService {
 	public void updateStatus(int driverId){
 		//Set the status of respective car to unavailable
         Driver driver = driverRepository3.findById(driverId).get();
-		Cab cab = new Cab ();
+		Cab cab = driver.getCab();
 		cab.setAvailable(Boolean.FALSE);
 		driverRepository3.save(driver);
 	}
